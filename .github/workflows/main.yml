@@ -1,10 +1,12 @@
 name: run CI regression suite for PRs to master
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches:
       - master
-
 jobs:
   just-api-tests:
     runs-on: ubuntu-latest
