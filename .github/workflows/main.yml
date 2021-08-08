@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '10.24.1'
+      - name: Install npm packages
+        run: npm install
       - name: Start mock REST API
         run: docker run -d -p 8080:80 -v "$PWD/db.json":/data/db.json clue/json-server
       - name: Wait for REST API to become available
