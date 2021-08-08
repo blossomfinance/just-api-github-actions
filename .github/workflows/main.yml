@@ -11,7 +11,6 @@ jobs:
   just-api-tests:
     runs-on: ubuntu-latest
     name: REST API just-api specs
-    runs-on: ubuntu-latest
     steps:
       # grab the code and build containers
       - name: Checkout nucleus repo
