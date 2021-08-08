@@ -1,0 +1,27 @@
+name: run CI regression suite for PRs to master
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  just-api-tests:
+    runs-on: ubuntu-latest
+    name: REST API just-api specs
+    runs-on: ubuntu-latest
+    steps:
+      # grab the code and build containers
+      - name: Checkout nucleus repo
+        uses: actions/checkout@v2
+      # need node for running API tests and using wait-port
+      - name: Set up node 10.24.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.24.1'
+      - name: Start mock REST API
+        run: docker run -d -p 8080:80 -v "$PWD/db.json":/data/db.json clue/json-server
+      - name: Wait for REST API to become available
+        run: ./node_modules/.bin/wait-port http://:8080 -t 5000
+      - name: Run just-api specs
+        run: npm run test

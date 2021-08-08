@@ -1,0 +1,35 @@
+{
+  "name": "just-api-github-actions",
+  "version": "0.0.1",
+  "description": "Demonstrate just-api tests running on github cations CI platformx",
+  "main": "index.js",
+  "scripts": {
+    "test": "just-api specs/*.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matmar10/just-api-github-actions.git"
+  },
+  "keywords": [
+    "just-api",
+    "REST",
+    "API",
+    "tests",
+    "CI",
+    "continuous",
+    "integration",
+    "github",
+    "actions",
+    "github"
+  ],
+  "author": "Matthew J. Martin <matthew.mar10@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matmar10/just-api-github-actions/issues"
+  },
+  "homepage": "https://github.com/matmar10/just-api-github-actions#readme",
+  "devDependencies": {
+    "@blossomfinance/just-api": "^1.2.8",
+    "wait-port": "^0.2.9"
+  }
+}

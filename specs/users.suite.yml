@@ -1,0 +1,37 @@
+meta:
+  name: Fetch list of posts
+configuration:
+  scheme: http
+  port: 8080
+  host: localhost
+  base_path: ''
+  common_headers:
+    - name: accept
+      value: application/json
+    - name: content-type
+      value: application/json
+
+specs:
+  - name: List posts
+    request:
+      path: /users
+      method: get
+    response:
+      status_code: 200
+      json_data:
+        - path: $[0].id
+          value: 1
+        - path: $[0].name
+          value: Ehsan Ilahi Zahir
+        - path: $[1].id
+          value: 2
+        - path: $[1].name
+          value: Habib Ur Rahman Yazdani
+        - path: $[2].id
+          value: 3
+        - path: $[2].name
+          value: Taqiuddin al-Hilali
+        - path: $[3].id
+          value: 4
+        - path: $[3].name
+          value: Muhammad Hammoud at-Tuwayjiri, Abu 'Abdullah

@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "id": 1, "name": "Ehsan Ilahi Zahir", "died": "1407" },
+    { "id": 2, "name": "Habib Ur Rahman Yazdani", "died": "1407" },
+    { "id": 3, "name": "Taqiuddin al-Hilali", "died": "1408" },
+    { "id": 4, "name": "Muhammad Hammoud at-Tuwayjiri, Abu 'Abdullah", "died": "1413" }
+  ]
+}
