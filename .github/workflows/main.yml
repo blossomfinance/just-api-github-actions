@@ -9,7 +9,7 @@ on:
       - master
 jobs:
   just-api-tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: REST API just-api specs
     steps:
       # grab the code and build containers
